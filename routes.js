@@ -82,7 +82,7 @@ const questions = [
       "Complete the sentence with the correct tense: 'Every day, she ______ (browse) the internet, but right now she ______ (download) a new software.'",
     answer: "browses, is downloading",
     options: [
-      "is browsing, is downloading",
+      "browses, is downloading",
       "browse, download",
       "browse, downloads",
       "browses, downloads",
