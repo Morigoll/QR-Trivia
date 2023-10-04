@@ -258,10 +258,10 @@ const questions = [
       "Complete the sentence with the right tense: 'She usually _______ (write) in her blog, but today she _______ (make) a video post.'",
     answer: "writes, is making",
     options: [
-      "is writing, is downloading",
-      "browse, download",
-      "browse, downloads",
-      "writes, downloads",
+      "is writing, is making",
+      "writes, is making",
+      "write, make",
+      "writes, makes",
     ].sort(() => Math.random() - 0.5),
     nextQR: "28",
   },
@@ -270,7 +270,7 @@ const questions = [
     question:
       "When I remember my password, I always _______ (enter) it immediately. But right now, I _______ (try) to recall it.",
     answer: "enter, am trying",
-    options: ["enters, tries", "enter, try", "enters, am trying"].sort(
+    options: ["enters, tries", "enter, try", "enter, am trying"].sort(
       () => Math.random() - 0.5
     ),
     nextQR: "29",
@@ -320,9 +320,12 @@ const questions = [
     question:
       "Complete the sentence: 'Usually, he _______ (share) photos, but now he _______ (post) an amusing story.'",
     answer: "shares, is posting",
-    options: ["share, posts", "share, post", "is sharing, is posting"].sort(
-      () => Math.random() - 0.5
-    ),
+    options: [
+      "shares, is posting",
+      "share, posts",
+      "share, post",
+      "is sharing, is posting",
+    ].sort(() => Math.random() - 0.5),
     nextQR: "end",
   },
 ];
