@@ -20,29 +20,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <!-- ZXing Library -->
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
     <script>
-        let scanner = new Instascan.Scanner({
-            video: document.getElementById('preview'),
-            facingMode: 'environment'  // This specifies the use of the back camera
-        });
+        const { BrowserMultiFormatReader } = window.ZXing;
+        const codeReader = new BrowserMultiFormatReader();
 
+        const videoElem = document.getElementById('preview');
 
-        scanner.addListener('scan', function (content) {
-            window.location.href = content;
-        });
+        codeReader.decodeFromInputVideoDevice(undefined, videoElem)
+            .then((result) => {
+                console.log(result);
+                window.location.href = result.text;
+            })
+            .catch((err) => console.error(err));
 
-        Instascan.Camera.getCameras().then(function (cameras) {
-            if (cameras.length > 0) {
-                let selectedCamera = cameras.find(camera => camera.facingMode === 'environment') || cameras[0];
-                scanner.start(selectedCamera);
-            } else {
-                console.error('No cameras found.');
-            }
-        }).catch(function (e) {
-            console.error(e);
-        });
+        // Si necesitas detener el escáner en algún momento, puedes hacerlo con:
+        // codeReader.reset();
     </script>
 </body>
 
