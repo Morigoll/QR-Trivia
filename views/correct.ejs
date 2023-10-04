@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Escape Room - Correcto</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.8/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4 animate__animated animate__bounceInDown">¡Respuesta correcta!</h1>
+    <div id="correct-animation" style="width: 300px; height: 300px; margin: auto;"></div>
+    <div class="text-center">
+      <button class="btn btn-success mt-3" onclick="window.location.href='/scan'">Continuar al siguiente QR</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const progressBar = $(".progress-bar");
+      const progressValue = progressBar.attr("aria-valuenow");
+      progressBar.css("width", 0); // Inicialmente, establece el ancho en 0
+
+      setTimeout(() => {
+        progressBar.css("width", progressValue + "%"); // Anima a su valor real
+      }, 500); // Retraso de medio segundo para que el usuario note la animación
+    });
+  </script>
+  <script>
+    var correctAnimation = lottie.loadAnimation({
+      container: document.getElementById('correct-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '../assets/lottie/success.json'
+    });
+  </script>
+  <script>
+    particlesJS.load('particles-js', '/assets/particles-js.json', function () {
+      console.log('particles.js loaded - callback');
+    });
+  </script>
+</body>
+
+</html>
