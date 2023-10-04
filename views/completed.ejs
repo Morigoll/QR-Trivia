@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Escape Room - Completado</title>
+  <title>QR Escape Room - Completed</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -14,31 +14,23 @@
 </head>
 
 <body>
-  <div id="particles-js"></div>
   <div class="container mt-5">
-    <h1 class="text-center mb-4">¡Felicidades!</h1>
+    <h1 class="text-center mb-4">Congratulations!</h1>
+    <div id="complete-animation" style="width: 300px; height: 300px; margin: auto;"></div>
     <div class="text-center">
-      <p>Has completado todas las preguntas del QR Escape Room. ¡Bien hecho!</p>
-      <a href="/" class="btn btn-primary mt-4">Volver al inicio</a>
+      <p>Congratulations! Head to the teacher's desk for your final surprise!</p>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function () {
-      const progressBar = $(".progress-bar");
-      const progressValue = progressBar.attr("aria-valuenow");
-      progressBar.css("width", 0); // Inicialmente, establece el ancho en 0
-
-      setTimeout(() => {
-        progressBar.css("width", progressValue + "%"); // Anima a su valor real
-      }, 500); // Retraso de medio segundo para que el usuario note la animación
-    });
-  </script>
-  <script>
-    particlesJS.load('particles-js', '/assets/particles-js.json', function () {
-      console.log('particles.js loaded - callback');
+    var completeAnimation = lottie.loadAnimation({
+      container: document.getElementById('complete-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '../assets/lottie/congratulations.json'
     });
   </script>
 </body>

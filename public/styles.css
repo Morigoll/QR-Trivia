@@ -6,14 +6,14 @@ html {
   margin: 0;
   overflow-y: auto;
   background-attachment: fixed;
-  background-color: #222831 !important;
+  background-color: rgba(255, 255, 255, 0.8);
   height: 100%;
 }
 
 h1 {
   font-size: 2em;
   color: #2c3e50;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #3AAFA9;
   display: inline-block;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ffd700;
+  /* color: #ffd700; */
   margin-top: 1em;
 }
 
@@ -38,32 +38,13 @@ p {
 a,
 a:hover,
 a:visited {
-  color: #ffd700;
+  /* color: #ffd700; */
   text-decoration: none;
 }
 
 a:hover {
   color: #00adb5;
   text-decoration: underline;
-}
-
-button,
-.btn {
-  background-color: #4a90e2;
-  color: #eeeeee;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 1em 0;
-}
-
-button:hover,
-.btn:hover {
-  color: #00adb5;
-  background-color: #357abd;
 }
 
 input[type="text"] {
@@ -92,17 +73,50 @@ input[type="text"] {
   border-radius: 8px;
 }
 
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
 .container {
   z-index: 1;
   position: relative;
   text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(26, 41, 47);
+  color: rgb(237, 247, 247);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #666;
+}
+
+a {
+  color: rgb(44, 123, 120);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: #3AAFA9 !important;
+  color: #FEFFFF !important;
+  border: 1px solid rgb(162, 215, 212);
+}
+
+.btn:hover {
+  background-color: rgb(44, 123, 120) !important;
+  color: #FEFFFF !important;
+}
+
+.option-btn {
+  margin-bottom: 10px;
 }

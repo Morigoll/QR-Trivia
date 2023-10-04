@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Escape Room - Pregunta</title>
+    <title>QR Escape Room - Question</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -14,9 +14,8 @@
 </head>
 
 <body>
-    <div id="particles-js"></div>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Pregunta: <%= question.question %>
+        <h1 class="text-center mb-4">Question: <%= question.question %>
         </h1>
 
         <div class="text-center">
@@ -25,8 +24,8 @@
 
                     <% question.options.forEach(function(option, index) { %>
                         <div class="option-btn">
-                            <button type="submit" class="btn btn-primary" name="answer" value="<%= option %>">
-                                Opción <%= index + 1 %>: <%= option %>
+                            <button type="submit" class="btn" name="answer" value="<%= option %>">
+                                Option <%= index + 1 %>: <%= option %>
                             </button>
                         </div>
                         <% }); %>
@@ -46,11 +45,6 @@
             setTimeout(() => {
                 progressBar.css("width", progressValue + "%"); // Anima a su valor real
             }, 500); // Retraso de medio segundo para que el usuario note la animación
-        });
-    </script>
-    <script>
-        particlesJS.load('particles-js', '/assets/particles-js.json', function () {
-            console.log('particles.js loaded - callback');
         });
     </script>
 </body>

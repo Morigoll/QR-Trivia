@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Escape Room - Respuesta incorrecta</title>
+  <title>QR Escape Room - Wrong answer</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -14,13 +14,12 @@
 </head>
 
 <body>
-  <div id="particles-js"></div>
   <div class="container mt-5">
-    <h1 class="text-center mb-4 animate__animated animate__shakeX">Respuesta incorrecta</h1>
+    <h1 class="text-center mb-4 animate__animated animate__shakeX">Wrong answer</h1>
     <div id="incorrect-animation" style="width: 300px; height: 300px; margin: auto;"></div>
     <div class="text-center">
-      <p>¡Inténtalo de nuevo!</p>
-      <a href="/question/<%= questionId %>" class="btn btn-danger mt-4">Volver a intentar</a>
+      <p>Try again!</p>
+      <a href="/question/<%= questionId %>" class="btn btn-danger mt-4">Retry</a>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,11 +43,6 @@
       loop: true,
       autoplay: true,
       path: '/assets/lottie/fail.json'
-    });
-  </script>
-  <script>
-    particlesJS.load('particles-js', '/assets/particles-js.json', function () {
-      console.log('particles.js loaded - callback');
     });
   </script>
 </body>

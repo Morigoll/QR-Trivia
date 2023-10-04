@@ -11,11 +11,10 @@
 </head>
 
 <body>
-    <div id="particles-js"></div>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">¡Bienvenido al QR Escape Room!</h1>
+        <h1 class="text-center mb-4">Welcome to the QR Escape Room!</h1>
         <div class="text-center">
-            <p>Comienza tu aventura escaneando el código QR.</p>
+            <p>Start your adventure by scanning the QR code</p>
             <video id="preview" style="width: 100%;"></video>
         </div>
     </div>
@@ -46,12 +45,6 @@
             }
         }).catch(function (e) {
             console.error(e);
-        });
-    </script>
-
-    <script>
-        particlesJS.load('particles-js', '/assets/particles-js.json', function () {
-            console.log('particles.js loaded - callback');
         });
     </script>
 </body>
