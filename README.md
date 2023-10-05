@@ -18,22 +18,20 @@ QR Escape Room is a web-based application that challenges players to answer triv
 
 1. Clone this repository to your local machine:
 
-   ```
-   bashCopy code
+   ```bash
    git clone https://github.com/morigoll/qr-escape-room.git
    ```
 
 2. Navigate to the project directory and install all the required dependencies:
 
-   ```
-   bashCopy codecd qr-escape-room
+   ```bash
+   cd qr-escape-room
    npm install
    ```
 
 3. Start the server:
 
-   ```
-   sqlCopy code
+   ```bash
    npm start
    ```
 
@@ -49,7 +47,7 @@ QR Escape Room is a web-based application that challenges players to answer triv
 
 ### Current Version: 1.0.0
 
-Release Date: DD/MM/YYYY
+Release Date: 04/10/2023
 
 #### Key Features
 
@@ -61,7 +59,7 @@ Release Date: DD/MM/YYYY
 
 ### Next Version: 1.1.0
 
-Estimated Release Date: DD/MM/YYYY
+Estimated Release Date: Unestimated
 
 #### Planned Features
 
@@ -71,14 +69,14 @@ Estimated Release Date: DD/MM/YYYY
 
 ### Future Versions
 
-#### Version 2.0.0 - Estimated Release Date: DD/MM/YYYY
+#### Version 2.0.0 - Estimated Release Date: Unestimated
 
 - **User Registration:** System to sign up and log in, allowing tracking of time taken to solve the trivia.
 - **Team Mode:** Option to play the trivia individually or as a team.
 - **Admin Panel:** Interface for administrators to modify questions and answers.
 - **Leaderboard:** Display of player scores and times to promote competition.
 
-#### Version 2.1.0 - Estimated Release Date: DD/MM/YYYY
+#### Version 2.1.0 - Estimated Release Date: Unestimated
 
 - **Achievements and Rewards:** Introduction of achievements based on player performance.
 - **Additional Languages:** Support for multiple languages in questions and user interface.
